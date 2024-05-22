@@ -9,6 +9,6 @@ import java.util.List;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
-public record CommandeEvent(Long id, List<ArticleCommande> articles){
+public record PanierModifieEvent(Long id, List<ArticleCommande> articles){
 
 }

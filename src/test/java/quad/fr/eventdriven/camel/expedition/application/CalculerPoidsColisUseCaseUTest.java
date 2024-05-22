@@ -31,7 +31,6 @@ class CalculerPoidsColisUseCaseUTest {
         Livrable unPCLivrable = Livrable.builder()
                 .poids(3.4F)
                 .id(idArticle)
-                .name("Workstation")
                 .build();
 
         when(livrableDataPort.getByProductId(any())).thenReturn(Optional.of(unPCLivrable));
@@ -56,14 +55,14 @@ class CalculerPoidsColisUseCaseUTest {
         Livrable unPCLivrable = Livrable.builder()
                 .poids(3.4F)
                 .id(idpc)
-                .name("Workstation")
+
                 .build();
 
         Long idfrigo = 12345L;
         Livrable unFrigo = Livrable.builder()
                 .poids(50F)
                 .id(idfrigo)
-                .name("frigo")
+
                 .build();
 
         when(livrableDataPort.getByProductId(idpc)).thenReturn(Optional.of(unPCLivrable));

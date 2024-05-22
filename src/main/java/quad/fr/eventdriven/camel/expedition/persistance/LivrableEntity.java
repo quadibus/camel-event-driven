@@ -21,8 +21,5 @@ public class LivrableEntity {
     UUID id;
 
     Long idArticle;
-    String name;
     Float poids;
-
-
 }

@@ -26,17 +26,17 @@ class CalculerPoidsColisUseCaseITest {
     public void setUp(){
         LivrableEntity frigo = LivrableEntity.builder()
                 .poids(54.2F)
-                .name("Frigo")
+
                 .idArticle(1234L)
                 .build();
         LivrableEntity pcportable = LivrableEntity.builder()
                 .poids(3.6F)
-                .name("PcPortable")
+
                 .idArticle(12345678L)
                 .build();
         LivrableEntity chaussures = LivrableEntity.builder()
                 .poids(1.2F)
-                .name("chaussures")
+               
                 .idArticle(1245680L)
                 .build();
         List<LivrableEntity> livrable = List.of(frigo, pcportable,chaussures);

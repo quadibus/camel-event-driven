@@ -15,13 +15,12 @@ import org.springframework.stereotype.Component;
 public class CalculerPoidsCommandeProcessor implements Processor {
 
     CalculerPoidsCommandeUseCase calculerPoidsCommandeUseCase;
-    CommandeEventMapper mapper;
+    PanierModifieEventMapper mapper;
 
     @Override
     public void process(Exchange exchange) throws Exception {
-        log.info(exchange.getIn().getBody(String.class));
-        CommandeEvent commandeEvent = exchange.getIn().getBody(CommandeEvent.class);
-        Colis colis = mapper.mapCommentEventToCommande(commandeEvent);
+        PanierModifieEvent panierModifieEvent = exchange.getIn().getBody(PanierModifieEvent.class);
+        Colis colis = mapper.mapCommentEventToCommande(panierModifieEvent);
         Float poidsColis = calculerPoidsCommandeUseCase.executer(colis);
 
         PoidsColisCalculeEvent poidsColisCalculeEvent = PoidsColisCalculeEvent.builder()

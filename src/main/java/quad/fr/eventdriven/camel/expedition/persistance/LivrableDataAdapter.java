@@ -19,7 +19,6 @@ public class LivrableDataAdapter implements LivrableDataPort {
                 livrableEntity ->
                         Livrable.builder()
                                 .poids(livrableEntity.getPoids())
-                                .name(livrableEntity.getName())
                                 .id(livrableEntity.getIdArticle())
                                 .build()
         );

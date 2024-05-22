@@ -7,6 +7,6 @@ import java.util.UUID;
 
 public interface ArticleRepository extends JpaRepository<ArticleEntity, UUID> {
 
-    public Optional<ArticleEntity> findByIdCommun(Long id);
+    public Optional<ArticleEntity> findByIdArticle(Long id);
 
 }

@@ -5,13 +5,13 @@ import quad.fr.eventdriven.camel.expedition.application.Livrable;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CommandeEventMapper {
+public class PanierModifieEventMapper {
 
-    public Colis mapCommentEventToCommande(CommandeEvent commandeEvent) {
+    public Colis mapCommentEventToCommande(PanierModifieEvent panierModifieEvent) {
         return Colis.builder()
-                .idCommande(commandeEvent.id())
+                .idCommande(panierModifieEvent.id())
                 .livrables(
-                        commandeEvent.articles().stream().map(
+                        panierModifieEvent.articles().stream().map(
                                 article -> Livrable.builder()
                                         .id(article.id())
                                         .build()

@@ -16,7 +16,7 @@ public class ArticleDatabaseAdapter implements ArticleDataPort {
 
     @Override
     public Optional<Article> findArticleByIdCommun(Long id) {
-        return articleRepository.findByIdCommun(id)
+        return articleRepository.findByIdArticle(id)
                 .map(articleMapper::mapArticleEntityToArticle);
     }
 

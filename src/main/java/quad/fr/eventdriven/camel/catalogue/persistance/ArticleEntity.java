@@ -2,8 +2,10 @@ package quad.fr.eventdriven.camel.catalogue.persistance;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
@@ -11,12 +13,14 @@ import java.util.UUID;
 @Table(name = "Article")
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ArticleEntity {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     UUID id;
-    Long idCommun;
-    String name;
-    Float poids;
+
+    Long idArticle;
+    Float prix;
 }

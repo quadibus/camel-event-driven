@@ -9,17 +9,15 @@ public class ArticleMapper {
 
     public Article mapArticleEntityToArticle(ArticleEntity articleEntity) {
         return Article.builder()
-                .poids(articleEntity.getPoids())
-                .name(articleEntity.getName())
-                .id(articleEntity.getIdCommun())
+                .id(articleEntity.getIdArticle())
+                .prix(articleEntity.getPrix())
                 .build();
     }
 
     public ArticleEntity mapArticleToArticleEntity(Article article){
         return ArticleEntity.builder()
-                .idCommun(article.id())
-                .poids(article.poids())
-                .name(article.name())
+                .idArticle(article.id())
+                .prix(article.prix())
                 .build();
     }
 
