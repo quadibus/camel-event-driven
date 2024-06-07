@@ -15,7 +15,7 @@ public class ExpeditionRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from("seda:expedition")
+        from("kafka:event-topic")
                 .routeId("expeditionRoute")
                 .choice().
                 when(simple("${header.class} contains 'PanierModifiedEvent'"))

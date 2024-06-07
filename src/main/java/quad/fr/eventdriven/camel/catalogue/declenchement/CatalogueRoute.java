@@ -15,7 +15,7 @@ public class CatalogueRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from("seda:catalogue").id("catalogueRoute")
+        from("kafka:event-topic").id("catalogueRoute")
                 .choice()
                     .when(simple("${header.class} contains 'PanierModifiedEvent'"))
                         .log("Commande recue")

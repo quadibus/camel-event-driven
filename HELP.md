@@ -1,21 +1,16 @@
 # Getting Started
 
-### Reference Documentation
-For further reference, please consider the following sections:
+## context
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.2.5/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.2.5/maven-plugin/reference/html/#build-image)
-* [Spring Configuration Processor](https://docs.spring.io/spring-boot/docs/3.2.5/reference/htmlsingle/index.html#appendix.configuration-metadata.annotation-processor)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.2.5/reference/htmlsingle/index.html#web)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/3.2.5/reference/htmlsingle/index.html#data.sql.jpa-and-spring-data)
+Here, we are creating a simple application with : 
+- a panier service that is able to create/modify a panier by adding article to it
+- a catalogue that is able to calculate total cost of panier
+- an expedition that is able to calculate total weight of panier.
 
-### Guides
-The following guides illustrate how to use some features concretely:
+Aim is to start event driven with one runtime, and with help of camel.
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Using Apache Camel with Spring Boot](https://camel.apache.org/camel-spring-boot/latest/spring-boot.html)
+## the move_to_kafka branch
+This branch aim is to demonstrate the help of camel when migrate from no broker architecture to "with kafka" with the help of camel.
+As we can see, the impact is minimal in code.
 
+to start kafka, please use the docker compose.

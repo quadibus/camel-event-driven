@@ -6,7 +6,6 @@ import org.apache.camel.Processor;
 import org.apache.camel.Produce;
 import org.apache.camel.ProducerTemplate;
 import org.springframework.stereotype.Component;
-import quad.fr.eventdriven.camel.TechnicalMulticast;
 import quad.fr.eventdriven.camel.panier.application.Panier;
 import quad.fr.eventdriven.camel.panier.application.PanierEventPort;
 
@@ -15,7 +14,7 @@ import java.util.UUID;
 @Component
 public class PanierEventMessageAdapter implements PanierEventPort {
 
-    @Produce(TechnicalMulticast.routeAddr)
+    @Produce("kafka:event-topic")
     ProducerTemplate producer;
 
 
