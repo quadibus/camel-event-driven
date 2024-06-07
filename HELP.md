@@ -1,4 +1,9 @@
-# Getting Started
+# apache camel monolith-first event driven
+
+the purpose here is to demonstrate how camel can help us building event driven architecture by starting with a monolith and decoupling 
+service with event and bus. Camel here is to help us connection to a message broker in the future.
+The main branch show how use pure camel to decoupling services.
+The move-to-kafka branch, show a first step inserting kafka and showing impact on code. 
 
 ## context
 
